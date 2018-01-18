@@ -1,0 +1,398 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+    <title>Ambiguität und Unsicherheit: 3 Ebenen</title>
+
+    <!-- meta information -->
+    <meta name="author" content="Andreas Wagner" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=1024" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+
+    <!-- favicons -->
+    <link rel="shortcut icon" href="resources/img/favicon.png" />
+    <link rel="apple-touch-icon" href="resources/img/apple-touch-icon.png" />
+
+    <!-- fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700,600,600italic,400italic,700italic,800,800italic&amp;subset=latin,latin-ext" rel="stylesheet" type="text/css" />
+
+    <!-- CSS reset and grid -->
+    <link href="vendor/normalize/normalize-4.1.1.css" rel="stylesheet" />
+    <link href="vendor/skeleton/skeleton-2.0.4.css" rel="stylesheet" />
+
+    <!-- styles for included libraries -->
+
+    <link rel="stylesheet" href="extras/highlight/styles/github.css">
+
+    <!-- mermaid -->
+    <link rel="stylesheet" href="extras/mermaid/mermaid.forest.css">
+
+    <!-- substeps -->
+    <!-- <link rel="stylesheet" href="extras/impress-substeps/css/substeps.css"> -->
+
+    <!-- chartist -->
+    <!-- <link rel="stylesheet" href="vendor/chartist/chartist.min-0.9.7.css" /> -->
+
+    <!-- codemirror -->
+    <!-- <link rel="stylesheet" href="vendor/codemirror/lib/codemirror.css" /> -->
+
+    <!-- highlight -->
+    <link rel="stylesheet" href="vendor/highlight/styles/default.css" />
+    <link rel="stylesheet" href="resources/css/hljs.linenumbering.css" />
+
+    <!-- magnific popup -->
+    <link rel="stylesheet" href="vendor/magnific-popup/magnific-popup-1.1.0.css" />
+
+    <!-- standard presentation styles -->
+    <link href="resources/css/style.css" rel="stylesheet" />
+
+    <!-- custom presentation styles -->
+    <link href="resources/css/custom.css" rel="stylesheet" />
+
+    <!-- js needed in head -->
+
+    <!-- greuler -->
+    <script src="vendor/d3/d3-3.5.6.js"></script>
+    <script src="vendor/cola/cola.v3.min.js"></script>
+    <script src="vendor/greuler/greuler-0.5.5.min.js"></script>
+
+    <!-- html5 dataset shim for IE -->
+    <script src="vendor/impress/html5-dataset.js" type="text/javascript"></script>
+</head>
+
+<body class="impress-not-supported">
+<div class="fallback-message">
+    <p>Your browser <b>doesn't support the features required</b> by impress.js, so you are presented with a simplified version of this presentation.</p>
+    <p>For the best experience please use the latest <b>Chrome</b>, <b>Safari</b> or <b>Firefox</b> browser.</p>
+</div>
+
+<div id="impress" data-transition-duration="750">
+
+    <div class="step slide" id="title" data-x="0" data-y="0" data-scale="2">
+        <h3><strong>Januar 2018</strong> | Die Modellierung des Zweifels</h3>
+        <h4>Akademie der Wissenschaften und der Literatur | Mainz</h4>
+
+        <h1 class="down-100">Ambiguität und Unsicherheit: 3 Ebenen</h1>
+
+        <h4 class="down-100">
+            <strong>Slides:</strong>
+            <a class="green" href="https://awagner-mainz.github.io/Ambiguity-Mainz-2018-01/" title="Präsentation online betrachten">https://awagner-mainz.github.io/Ambiguity-Mainz-2018-01/</a>
+        </h4>
+
+        <h5>
+            <strong><a class="green" href="https://www.rg.mpg.de/mitarbeiter/51578/712252" title="Andreas Wagners Homepage">Andreas Wagner</a></strong> |
+            <a class="green" href="mailto:wagner@rg.mpg.de" title="Andreas Wagner per E-Mail">wagner@rg.mpg.de</a> |
+<!--
+            <img src="resources/img/twitter_bird_logo_2012.svg" alt="Twitter" class="twitter-icon" />
+                <a class="green" href="https://twitter.com/anwagnerdreas" title="Andreas Wagner on Twitter">@anwagnerdreas</a> |
+            <img src="resources/img/octicons-mark-github.svg" alt="Github" class="gh-icon" />
+                <a class="green" href="https://github.com/awagner-mainz" title="Andreas Wagner on GitHub">awagner-mainz</a> |
+-->
+                <a class="green" href="https://creativecommons.org/licenses/by/4.0/" title="Lizenz CC-BY 4.0">CC-BY 4.0</a>
+        </h5>
+    </div>
+
+<!--
+    <div class="step slide" id="contents" data-rel-x="1000" data-y="0">
+        <header>
+            <h1>Content</h1>
+        </header>
+        <main>
+            <ul class="line-height-one-five">
+                <li>Research project "Americani a Roma" (AmaR)</li>
+                    <ul>
+                        <li class="small">Historical Context</li>
+                        <li class="small">Research Questions</li>
+                        <li class="small">Data</li>
+                        <li class="small">Approach</li>
+                        <li class="small">Partners</li>
+                        <li class="small">Context at MPIeR</li>
+                    </ul>
+                <li>(Preliminary) Data Model</li>
+            </ul>
+        </main>
+    </div>
+-->
+
+    <div class="step slide" id="project_intro" data-rel-x="1000" data-y="0">
+        <header>
+            <h2>Church Governance after Trent</h2>
+        </header>
+        <main>
+            <h2><a class="green" href="http://www.rg.mpg.de/forschung/die_regierung_der_universalkirche">Max Planck Forschungsgruppe</a></h2>
+            <h3><a class="green" href="http://www.rg.mpg.de/albani">Leitung: Benedetta Albani</a></h3>
+            <h4>Umsetzung und Interpretation der Konzilsbeschlüsse, 1567-1681</h4>
+            <h4>Daten</h4>
+            <ul>
+                <li>17 Pontifikate</li>
+                <li>270 Bände Archivmaterialien</li>
+                <li>&gt; 33.000 Entscheidungen der Konzilskongregation</li>
+                <li>750 Diözesen</li>
+                <li>&gt; damit 100 befasste Kardinäle</li>
+                <li>Jede einzelne beschrieben durch &gt;100 Felder</li>
+            </ul>
+            <img style="width:10em;margin-left:24em;margin-top:-6em;border:1px solid #7ca6a6;box-shadow: 4px 4px 2px grey;" src="resources/img/asv-2.png" alt="Vatican Archive 2"/>
+            <img style="width:16em;margin-left:17em;margin-top:-3em;border:1px solid #7ca6a6;box-shadow: 4px 4px 2px grey;" src="resources/img/asv-1.png" alt="Vatican Archive 1"/>
+         </main>
+    </div>
+
+    <div class="step slide" id="project_sample_doc">
+        <header>
+            <h2>Church Governance after Trent</h2>
+        </header>
+        <main>
+            <h2>Beispielseiten</h2>
+            <div class="mfp-gallery">
+                <a class="green" href="resources/img/pos4_1.jpg">
+                    <img style="width:45%;float:left;border:1px solid #7ca6a6;box-shadow: 4px 4px 2px grey;"
+                         src="resources/img/pos4_1.jpg"
+                         alt="Beispielseite 1: Pos. 4, fol. 422r, 1581-09-02"/>
+                </a>
+                <a class="green" href="resources/img/pos4_2.jpg">
+                    <img style="width:1px;"
+                         src="resources/img/pos4_2.jpg"
+                         alt="Beispielseite 1 mit Bereichsmarkierungen: Pos. 4, fol. 422r, 1581-09-02"/>
+                </a>
+                <a class="green" href="resources/img/pos157_1.jpg">
+                    <img style="width:45%;margin-left:2em;border:1px solid #7ca6a6;box-shadow: 4px 4px 2px grey;"
+                         src="resources/img/pos157_1.jpg"
+                         alt="Beispielseite 2: Pos. 157, fol. 461r, 1669-11-16"/>
+                </a>
+                <a class="green" href="resources/img/pos157_2.jpg">
+                    <img style="width:1px;"
+                         src="resources/img/pos157_2.jpg"
+                         alt="Beispielseite 2 mit Bereichsmarkierungen: Pos. 157, fol. 461r, 1669-11-16"/>
+                </a>
+            </div>
+
+            <h4>
+               Heterogene, oftmals unvollständige, inkonsistente,
+                z.T. unleserliche oder nur andeutende Akteneinträge
+            </h4>
+
+        </main>
+    </div>
+
+    <div class="step slide" id="project_sample_tbl">
+        <header>
+            <h2>Church Governance after Trent</h2>
+        </header>
+        <main>
+            <h2>Ansatz: Tabelle</h2>
+        </main>
+    </div>
+
+    <div class="step slide" id="project_sample_uncert">
+        <header>
+            <h2>Church Governance after Trent</h2>
+        </header>
+        <main>
+            <h2>Beispiele-Unsicherheiten</h2>
+        </main>
+    </div>
+
+    <div class="step slide" id="project_types_of_uncert">
+        <header>
+            <h2>Church Governance after Trent</h2>
+        </header>
+        <main>
+            <h2>Arten v. Unsicherheiten</h2>
+        </main>
+    </div>
+
+
+<!--
+    <div class="step slide" id="project_context">
+        <header>
+            <h2>Die Regierung der Universalkirche nach dem Konzil von Trient</h2>
+        </header>
+        <main>
+            <h4>Project Partners</h4>
+            <ul>
+                <li>Vatican Secret Archives</li>
+                <li>Univ. Roma Tre
+                    <ul>
+                        <li class="small">History Dpt.</li>
+                        <li class="small">Big Data and Databases Research Group</li>
+                    </ul>
+                </li>
+            </ul>
+            <h4>MPIeR Complementary Activities</h4>
+            <ul>
+                <li class="small">Focus on Modelling Legal History: Texts, Concepts, Norms</li>
+                <li class="small">Rhein-Main Interest Group on LOD in Humanities</li>
+                <li class="small">Data for History Consortium</li>
+            </ul>
+        </main>
+    </div>
+-->
+
+    <div class="step slide" id="data_model_level_1">
+        <header>
+            <h1>(Vorläufiges) Datenmodell</h1>
+            <h2>Verfahren</h2>
+        </header>
+        <main>
+            <h2>Ebene 1</h2>
+            <h4>Historisches Beratungsverfahren</h4>
+            <ul>
+                <li class="small"><i>Case</i> als zentral Entität, <i>Hearings</i>, <i>Participants</i>, <i>Resolution</i>, <i>Matter</i></li>
+                <li class="small">Vgl. <a class="green" href="#/fin">Wyner/Hoekstra 2012</a></li>
+                <li class="small">"Reale" Welt: Ideelle/konzeptuelle Welt, Normative Ordnung</li>
+                <li class="small">Noch mit CIDOC CRM (u.a.) zu integrieren</li>
+            </ul>
+            <div class="mfp-lightbox"><a class="green" href="resources/img/model_case.png"><img style="width:30em;margin-left:2em;margin-top:0em;border:1px solid #7ca6a6;box-shadow: 4px 4px 2px grey;" src="resources/img/model_case.png" alt="Data Model of Cases"/></a></div>
+        </main>
+    </div>
+
+    <div class="step slide" id="data_model_level_2">
+        <header>
+            <h1>(Vorläufiges) Datenmodell</h1>
+            <h2>Bericht</h2>
+        </header>
+        <main>
+            <h2>Ebene 2</h2>
+            <h4>Archivalische Quellen</h4>
+            <ul>
+                <li class="small"><i>Positiones</i> der Ebene 2 dokumentieren <i>Cases</i> der Ebene 1</li>
+                <li class="small">Text: Symbolische Objekte, die sich auf "reale" Objekte beziehen</li>
+            </ul>
+            <div class="mfp-lightbox"><a class="green" href="resources/img/model_report.png"><img style="width:30em;margin-left:2em;margin-top:0em;border:1px solid #7ca6a6;box-shadow: 4px 4px 2px grey;" src="resources/img/model_report.png" alt="Data Model of Reports"/></a></div>
+        </main>
+    </div>
+
+    <div class="step slide" id="data_model_level_3">
+        <header>
+            <h1>(Vorläufiges) Datenmodell</h1>
+            <h2>Forschung</h2>
+        </header>
+        <main>
+            <h2>Ebene 3</h2>
+            <h4>Forschungsprozess</h4>
+            <ul>
+                <li class="small"><i>ForscherInnen</i> nehmen Zuordnungen und Einschätzungen vor</li>
+                <li class="small">Interpretation: Eigenschaften und Relationen der Ebenen 1 und 2 sind <i>Thesen</i> der Forschung heute</li>
+                <li class="small">Work-in-Progress Erweiterungen von CIDOC CRM als Grundlage</li>
+                <li class="small">Vgl. <a class="green" href="#/fin">Ruymbeke et al 2017</a>/<a class="green" href="#/fin">Niccolucci/Hermon 2017</a></li>
+            </ul>
+            <div class="mfp-lightbox"><a class="green" href="resources/img/model_research.png"><img style="width:30em;margin-left:2em;margin-top:0em;border:1px solid #7ca6a6;box-shadow: 4px 4px 2px grey;" src="resources/img/model_research.png" alt="Data Model of Research Processes"/></a></div>
+        </main>
+    </div>
+
+    <div class="step slide" id="challenges">
+        <header>
+            <h1>Schluss</h1>
+            <h2>Herausforderungen</h2>
+        </header>
+        <main>
+            <h2>Wesentliche Herausforderungen</h2>
+            <ul>
+                <li>Modellierung finalisieren</li>
+                <li>Gewissheiten usw. auch prozessieren/verwenden</li>
+                <li>Für FachwissenschaftlerInnen brauchbare Dateneingabe / -exploration</li>
+            </ul>
+        </main>
+    </div>
+
+    <div class="step slide" id="fin">
+        <header>
+            <h1>Vielen Dank</h1>
+        </header>
+        <main>
+            <h3>Verweise</h3>
+            <ul style="font-size:18px;" >
+                <li id="LitNiccolucciHermon2017">Niccolucci, Franco / Sorin Hermon (2017): "Expressing reliability with CIDOC CRM", in: <i>International Journal on Digital Libraries</i> 18/4, pp. 281-287, <a class="green" href="https://doi.org/10.1007/s00799-016-0195-1">doi:10.1007/s00799-016-0195-1</a>.</li>
+                <li id="LitRuymbekeEtAl2017">Ruymbeke, Muriel van / Pierre Hallot / Roland Billen (2017): "Enhancing CIDOC-CRM and compatible models with the concept of multiple interpretations", in: <i>ISPRS Ann. Photogramm. Remote Sens. Spatial Inf. Sci.</i>, IV-2/W2, 287-294, <a class="green" href="https://doi.org/10.5194/isprs-annals-IV-2-W2-287-2017">doi:10.5194/isprs-annals-IV-2-W2-287-2017</a>.</li>
+                <li id="WynerHoekstra2010">Wyner, Adam / Rinke Hoekstra (2012): "A Legal Case OWL Ontology with an Instantiation of <i>Popov v. Hayashi</i>", in: <i>Artificial Intelligence and Law</i>. <a class="green" href="https://doi.org/10.1007/s10506-012-9119-6">doi:10.1007/s10506-012-9119-6</a>.</li>
+                <li id="LitProjektseite"><a class="green" href="https://www.rg.mpg.de/forschung/die_regierung_der_universalkirche">Die Regierung der Universalkirche nach dem Konzil von Trient</a></li>
+            </ul>
+            <p>&nbsp;</p>
+            <h5>
+                <a class="green" href="https://www.rg.mpg.de/mitarbeiter/51578/712252"><strong>Andreas Wagner</strong></a><br>
+                <a class="green" href="mailto:wagner@rg.mpg.de" title="Andreas Wagner per E-Mail">wagner@rg.mpg.de</a> |
+                <img src="resources/img/twitter_bird_logo_2012.svg" alt="Twitter" class="twitter-icon" />
+                    <a class="green" href="https://twitter.com/anwagnerdreas" title="Andreas Wagner auf Twitter">@anwagnerdreas</a> |
+                <img src="resources/img/octicons-mark-github.svg" alt="Github" class="gh-icon" />
+                    <a class="green" href="https://github.com/awagner-mainz" title="Andreas Wagner auf GitHub">awagner-mainz</a><br/>
+                Tel: 069 / 789 78 - 107<br/>
+            </h5>
+            <p style="font-size:18px;" >
+            Präsentation erstellt unter Verwendung von <a class="green" href="https://github.com/impress/impress.js">impress.js</a> und <a class="green" href="https://www.simplediagrams.com/">SimpleDiagrams</a>, online ansehen unter<br/>
+            <a class="green" href="https://awagner-mainz.github.io/Ambiguity-Mainz-2018-01/" title="Präsentation online betrachten">https://awagner-mainz.github.io/Ambiguity-Mainz-2018-01/</a>.</h4>
+            </p>
+        </main>
+    </div>
+
+<!--
+    <div id="overview" class="step" data-rel-x="-10000" data-y="0" data-scale="4" style="pointer-events: none;">
+    </div>
+ -->
+</div>
+
+<!--
+    This is a UI plugin. You can read more about plugins in src/plugins/README.md.
+    For now, I'll just tell you that this adds some graphical controls to navigate the
+    presentation. In the CSS file you can style them as you want. We've put them bottom right.
+-->
+<!--
+<div id="impress-toolbar"></div>
+-->
+
+<script>
+if ("ontouchstart" in document.documentElement) {
+    document.querySelector(".hint").innerHTML = "<p>Swipe left or right to navigate</p>";
+}
+</script>
+
+<!-- Extra modules
+     Load highlight.js, mermaid.js and impressCconsole.js from extras.
+     If you're curious about details, these are initialized in src/plugins/extras/extras.js -->
+<script type="text/javascript" src="extras/highlight/highlight.pack.js"></script>
+<script type="text/javascript" src="extras/mermaid/mermaid.min.js"></script>
+<!-- <script type="text/javascript" src="extras/impress-substeps/js/substeps.js"></script> -->
+<script type="text/javascript" src="extras/impress-console/js/impressConsole.js"></script>
+<script type="text/javascript">
+  // For impressConsole, we unfortunately must also set the path to a mandatory css file
+  // which is relative to this html file.
+  // See https://github.com/regebro/impress-console/issues/19
+  var impressConsoleCss = 'extras/impress-console/css/impressConsole.css';
+</script>
+
+    <!-- jquery -->
+    <script src="vendor/jquery/jquery-1.11.0.min.js"></script>
+
+    <!-- chartist -->
+    <script src="vendor/chartist/chartist.min-0.9.7.js"></script>
+    <script src="resources/js/chartist.charts.js"></script>
+
+    <!-- codemirror -->
+    <script src="vendor/codemirror/lib/codemirror.js"></script>
+    <script src="vendor/codemirror/addon/edit/matchbrackets.js"></script>
+    <script src="vendor/codemirror/mode/cypher/cypher.js"></script>
+    <script>
+        var editor = CodeMirror.fromTextArea(document.getElementById("cypher"), {
+            mode: "application/x-cypher-query",
+            theme: 'neo'
+        });
+    </script>
+
+    <!-- highlight -->
+    <script src="vendor/highlight/highlight.pack-9.3.0.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+    <script src="resources/js/hljs.linenumbering.js"></script>
+
+    <!-- magnific popup -->
+    <script src="vendor/magnific-popup/jquery.magnific-popup.min-1.1.0.js"></script>
+    <script src="resources/js/magnific-popup.lightbox.js"></script>
+
+<!--
+    To make all described above really work, you need to include impress.js in the page.
+    You also need to call a `impress().init()` function to initialize impress.js presentation.
+    And you should do it in the end of your document.
+-->
+<script type="text/javascript" src="js/impress.js"></script>
+<script>impress().init();</script>
+
+</body>
+</html>
