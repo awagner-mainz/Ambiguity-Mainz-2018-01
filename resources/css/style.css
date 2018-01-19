@@ -18,6 +18,7 @@ body {
 
 .step {
 	width: 1060px;
+	height: 750px;
 	padding: 0 0 40px 0;
 		-webkit-box-sizing: border-box;
 		-moz-box-sizing: border-box;
@@ -307,11 +308,11 @@ CLASSES FOR SPECIAL LAYOUT/TYPOGRAPHY
 }
 
 .medium {
-	font-size: 26px;
+	font-size: 24px;
 }
 
 .small {
-	font-size: 22px;
+	font-size: 20px;
 }
 
 .x-small {
